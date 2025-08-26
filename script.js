@@ -4,18 +4,21 @@ let totalCopy = parseInt(document.getElementById("copy-value").innerText);
 
 // ****** All Function******
 
-function showCopy()
+function showCopy(num)
 {
+ navigator.clipboard.writeText(
+      document.getElementById(num).innerText
+    )
   alert("Copied successfully")
   let updatedCopy = ++totalCopy;
-    document.getElementById("copy-value").innerText = updatedCopy;
+  document.getElementById("copy-value").innerText = updatedCopy;
+  
+
 }
 
 function showCall(txt, num)
 {
   
-  
-
   if (totalCoin >= 20)
   {
     alert("Calling " + txt + " " + num + " ...");
@@ -36,7 +39,7 @@ function showCall(txt, num)
   }
 
   else {
-    alert("Not Enough Coin!!!")
+    alert("Not Enough Coin!!! You need at least 20 coin to Call")
   }
   
 }
@@ -52,55 +55,56 @@ function showHeart()
 document.getElementById("national-copy-btn")
   .addEventListener('click', function ()
   {
-    showCopy();
+
+    showCopy("national-num");
 })
 
 document.getElementById("police-copy-btn")
   .addEventListener('click', function ()
   {
-    showCopy();
+    showCopy("police-num");
 })
 
 document.getElementById("fire-copy-btn")
   .addEventListener('click', function ()
   {
-    showCopy();
+    showCopy("fire-num");
 })
 
 document.getElementById("ambulance-copy-btn")
   .addEventListener('click', function ()
   {
-    showCopy();
+    showCopy("ambulance-num");
 })
 
 document.getElementById("women-copy-btn")
   .addEventListener('click', function ()
   {
-    showCopy();
+    showCopy("women-num");
 })
 
 document.getElementById("anti-copy-btn")
   .addEventListener('click', function ()
   {
-    showCopy();
+    showCopy("anti-num");
 })
 
 document.getElementById("electricity-copy-btn")
   .addEventListener('click', function ()
   {
-    showCopy();
+    showCopy("electricity-num");
 })
 
 document.getElementById("brac-copy-btn")
   .addEventListener('click', function ()
   {
-    showCopy();
+    showCopy("brac-num");
 })
 
 document.getElementById("railway-copy-btn")
   .addEventListener('click', function ()
   {
-    showCopy();
+    showCopy("railway-num");
   })
 
   //event listener for call
