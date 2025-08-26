@@ -29,6 +29,13 @@ function showCall(txt, num)
   
 }
 
+function showHeart()
+{
+  ++totalHeart;
+
+    document.getElementById("heart-value").innerText = totalHeart;
+}
+
 //******All Event Listener for copy*******/
 document.getElementById("national-copy-btn")
   .addEventListener('click', function ()
@@ -159,5 +166,51 @@ document.getElementById("railway-call-btn")
     showCall(railwayText, railwayNum);
 });
   
+// Heart event listener
 
+document.getElementById("national-heart")
+  .addEventListener('click', function ()
+  {
+    showHeart();
+  
+  })
 
+  document.getElementById("police-heart")
+  .addEventListener('click', function () {
+    showHeart();
+});
+
+document.getElementById("fire-heart")
+  .addEventListener('click', function () {
+    showHeart();
+});
+
+document.getElementById("abmulance-heart")
+  .addEventListener('click', function () {
+    showHeart();
+});
+
+document.getElementById("women-heart")
+  .addEventListener('click', function () {
+    showHeart();
+});
+
+document.getElementById("anti-heart")
+  .addEventListener('click', function () {
+    showHeart();
+});
+
+document.getElementById("electricity-heart")
+  .addEventListener('click', function () {
+    showHeart();
+});
+
+document.getElementById("brac-heart")
+  .addEventListener('click', function () {
+    showHeart();
+});
+
+document.getElementById("railway-heart")
+  .addEventListener('click', function () {
+    showHeart();
+});
