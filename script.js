@@ -20,7 +20,19 @@ function showCall(txt, num)
   {
     alert("Calling " + txt + " " + num + " ...");
     totalCoin = totalCoin - 20;
-  document.getElementById("coin-value").innerText = totalCoin;
+    document.getElementById("coin-value").innerText = totalCoin;
+
+    let time = new Date();
+
+    document.getElementById("call-history").innerHTML += `
+  <div class="bg-gray-200 rounded-lg p-4 px-8 mt-2">
+    <h1 class="font-semibold text-lg">${txt}</h1>
+    <div class="flex justify-between items-center">
+      <p class="hind-font text-[#5C5C5C] text-lg">${num}</p>
+      <p class="hind-font text-[#5C5C5C] text-lg">${time.toLocaleTimeString()}</p>
+    </div>
+  </div>
+`;
   }
 
   else {
@@ -213,4 +225,11 @@ document.getElementById("brac-heart")
 document.getElementById("railway-heart")
   .addEventListener('click', function () {
     showHeart();
+});
+
+//  *****Clear buton****
+
+document.getElementById("clear-btn")
+  .addEventListener('click', function () {
+    document.getElementById("call-history").innerText = "";
 });
