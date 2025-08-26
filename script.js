@@ -4,13 +4,32 @@ let totalCopy = parseInt(document.getElementById("copy-value").innerText);
 
 // ****** All Function******
 
-function showCopy(id)
+function showCopy()
 {
+  alert("Copied successfully")
   let updatedCopy = ++totalCopy;
     document.getElementById("copy-value").innerText = updatedCopy;
 }
 
-//******All Event Listener *******/
+function showCall(txt, num)
+{
+  
+  
+
+  if (totalCoin >= 20)
+  {
+    alert("Calling " + txt + " " + num + " ...");
+    totalCoin = totalCoin - 20;
+  document.getElementById("coin-value").innerText = totalCoin;
+  }
+
+  else {
+    alert("Not Enough Coin!!!")
+  }
+  
+}
+
+//******All Event Listener for copy*******/
 document.getElementById("national-copy-btn")
   .addEventListener('click', function ()
   {
@@ -63,5 +82,82 @@ document.getElementById("railway-copy-btn")
   .addEventListener('click', function ()
   {
     showCopy();
+  })
+
+  //event listener for call
+document.getElementById("national-call-btn")
+  .addEventListener('click', function ()
+  {
+    const nationalText = document.getElementById("national-txt").innerText;
+    const nationalNum = document.getElementById("national-num").innerText;
+
+    showCall(nationalText, nationalNum);
 })
+
+document.getElementById("police-call-btn")
+  .addEventListener('click', function ()
+  {
+    const policeText = document.getElementById("police-txt").innerText;
+    const policeNum = document.getElementById("police-num").innerText;
+
+    showCall(policeText, policeNum);
+})
+
+document.getElementById("fire-call-btn")
+  .addEventListener('click', function () {
+    const fireText = document.getElementById("fire-txt").innerText;
+    const fireNum = document.getElementById("fire-num").innerText;
+
+    showCall(fireText, fireNum);
+});
+
+document.getElementById("ambulance-call-btn")
+  .addEventListener('click', function () {
+    const ambulanceText = document.getElementById("ambulance-txt").innerText;
+    const ambulanceNum = document.getElementById("ambulance-num").innerText;
+
+    showCall(ambulanceText, ambulanceNum);
+});
+
+document.getElementById("women-call-btn")
+  .addEventListener('click', function () {
+    const womenText = document.getElementById("women-txt").innerText;
+    const womenNum = document.getElementById("women-num").innerText;
+
+    showCall(womenText, womenNum);
+});
+
+document.getElementById("anti-call-btn")
+  .addEventListener('click', function () {
+    const antiText = document.getElementById("anti-txt").innerText;
+    const antiNum = document.getElementById("anti-num").innerText;
+
+    showCall(antiText, antiNum);
+});
+
+document.getElementById("electricity-call-btn")
+  .addEventListener('click', function () {
+    const electricityText = document.getElementById("electricity-txt").innerText;
+    const electricityNum = document.getElementById("electricity-num").innerText;
+
+    showCall(electricityText, electricityNum);
+});
+
+document.getElementById("brac-call-btn")
+  .addEventListener('click', function () {
+    const bracText = document.getElementById("brac-txt").innerText;
+    const bracNum = document.getElementById("brac-num").innerText;
+
+    showCall(bracText, bracNum);
+});
+
+document.getElementById("railway-call-btn")
+  .addEventListener('click', function () {
+    const railwayText = document.getElementById("railway-txt").innerText;
+    const railwayNum = document.getElementById("railway-num").innerText;
+
+    showCall(railwayText, railwayNum);
+});
+  
+
 
