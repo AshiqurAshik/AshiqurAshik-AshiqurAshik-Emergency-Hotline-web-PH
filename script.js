@@ -21,7 +21,7 @@ function showCall(txt, num)
   
   if (totalCoin >= 20)
   {
-    alert("Calling " + txt + " " + num + " ...");
+    alert("📞 Calling " + txt + " " + num + " ...");
     totalCoin = totalCoin - 20;
     document.getElementById("coin-value").innerText = totalCoin;
 
